@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jujubilu Lembrancinhas — Catálogo 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="catalogo.css" />
+  </head>
+  <body>
+    <div class="screen-toolbar">
+      <h1>Jujubilu — Catálogo com preços (lista atualizada)</h1>
+      <div class="actions">
+        <button type="button" onclick="window.print()">Imprimir / PDF</button>
+        <a class="secondary" href="../index.html">Site anterior</a>
+      </div>
+    </div>
+
+    <main id="catalog" class="catalog" aria-label="Catálogo Jujubilu"></main>
+
+    <svg width="0" height="0" aria-hidden="true">
+      <symbol id="bow" viewBox="0 0 120 90">
+        <ellipse cx="28" cy="42" rx="26" ry="20" fill="#ff4fa3" />
+        <ellipse cx="92" cy="42" rx="26" ry="20" fill="#ff4fa3" />
+        <circle cx="60" cy="42" r="14" fill="#ff78b8" />
+        <path d="M52 52 L42 86 L58 70 Z" fill="#ff4fa3" />
+        <path d="M68 52 L78 86 L62 70 Z" fill="#ff4fa3" />
+        <circle cx="60" cy="42" r="7" fill="#fff" opacity="0.55" />
+      </symbol>
+      <symbol id="lolly" viewBox="0 0 60 90">
+        <circle cx="30" cy="28" r="22" fill="#fff" />
+        <path
+          d="M14 28c8-14 24-14 32 0  -8 14-24 14-32 0z"
+          fill="#ff4fa3"
+        />
+        <path
+          d="M14 28c8 14 24 14 32 0"
+          fill="none"
+          stroke="#ffd36e"
+          stroke-width="6"
+        />
+        <rect x="27" y="48" width="6" height="36" rx="3" fill="#f4d9a6" />
+      </symbol>
+    </svg>
+
+    <script src="products.js"></script>
+    <script src="catalogo.js"></script>
+  </body>
+</html>
