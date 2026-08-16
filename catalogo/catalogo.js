@@ -1,12 +1,15 @@
 (function () {
   const products = window.CATALOG_PRODUCTS || [];
-  const PAGE_SIZE = 6;
+  const PAGE_SIZE = 4;
   const LINE_LABELS = [
     "Linha Premium",
     "Linha Premium",
     "Linha Econômica",
     "Linha Premium",
     "Linha Supremo",
+    "Linha Supremo",
+    "Linha Premium",
+    "Linha Econômica",
     "Linha Supremo",
   ];
 
@@ -18,24 +21,31 @@
     return pages;
   }
 
+  function gridClass(count) {
+    if (count === 3) return "grid grid-3";
+    if (count === 2) return "grid grid-2";
+    if (count === 1) return "grid grid-1";
+    return "grid";
+  }
+
   function formatPrices(product) {
     const order = [20, 15, 10];
     const rows = order
       .filter((qty) => product.prices && product.prices[qty] != null)
       .map(
         (qty) =>
-          `<div class="price-row"><span>${qty} unds</span><span>R$ ${product.prices[qty]}</span></div>`
+          `<span class="price-chip"><em>${qty}</em> R$ ${product.prices[qty]}</span>`
       );
 
     if (product.pricesAlt) {
       rows.push(
-        `<div class="price-row"><span>${product.pricesAlt.label}</span><span>R$ ${product.pricesAlt.value}</span></div>`
+        `<span class="price-chip"><em>${product.pricesAlt.label}</em> R$ ${product.pricesAlt.value}</span>`
       );
     }
 
-    if (!rows.length && product.minOrder) {
+    if (!rows.length && product.minOrder && product.prices) {
       rows.push(
-        `<div class="price-row"><span>mín. ${product.minOrder} unds</span><span>R$ ${product.prices[product.minOrder]}</span></div>`
+        `<span class="price-chip"><em>mín. ${product.minOrder}</em> R$ ${product.prices[product.minOrder]}</span>`
       );
     }
 
@@ -49,21 +59,24 @@
 
     return `
       <article class="product">
-        <div class="product-photo">
-          <img src="images/${product.id}.jpg" alt="${product.name}" />
+        <div class="product-visual">
+          <div class="product-photo">
+            <img src="images/${product.id}.jpg?v=20260816b" alt="${product.name}" />
+          </div>
+          <div class="product-ref" aria-label="Referência ${product.id}">${product.id}</div>
         </div>
-        <div class="product-id">${product.id}</div>
-        <h3 class="product-name">${product.name}</h3>
-        <p class="product-size">${product.size}</p>
-        ${note}
-        <div class="prices">${formatPrices(product)}</div>
+        <div class="product-details">
+          <h3 class="product-name">${product.name}</h3>
+          <p class="product-size">${product.size}</p>
+          ${note}
+          <div class="prices">${formatPrices(product)}</div>
+        </div>
       </article>
     `;
   }
 
   function pageMarkup(pageProducts, index) {
     const line = LINE_LABELS[index] || "Catálogo";
-    const gridClass = pageProducts.length === 5 ? "grid grid-5" : "grid";
 
     return `
       <section class="page" aria-label="Página ${index + 1}">
@@ -81,16 +94,13 @@
           <h2 class="page-title">CATÁLOGO</h2>
         </div>
 
-        <div class="${gridClass}">
+        <div class="${gridClass(pageProducts.length)}">
           ${pageProducts.map(productCard).join("")}
         </div>
 
         <footer class="page-footer">
           <div class="site">www.jujubilulembrancinhas.com.br</div>
         </footer>
-
-        <svg class="candy candy-left" aria-hidden="true"><use href="#lolly"></use></svg>
-        <svg class="candy candy-right" aria-hidden="true"><use href="#lolly"></use></svg>
       </section>
     `;
   }

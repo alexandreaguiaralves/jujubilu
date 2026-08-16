@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jujubilu Lembrancinhas — Catálogo 2026</title>
+    <title>Jujubilu Lembrancinhas — Catálogo e Portfólio 2026</title>
+    <meta
+      name="description"
+      content="Lembrancinhas personalizadas há 17 anos. Catálogo 2026, portfólio e pedidos pelo WhatsApp."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,78 +18,163 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header-content">
-          <div class="brand">
-            <div class="logo">
-              <div class="logo-circle"><span>JL</span></div>
-            </div>
-            <div class="brand-info">
-              <h1>Jujubilu Lembrancinhas</h1>
-              <p>Catálogo atualizado 2026 — 35 produtos com preços</p>
-              <div class="badges">
-                <span class="badge badge-pink">Produtos personalizados</span>
-                <span class="badge badge-purple">Tabela por quantidade</span>
-              </div>
-            </div>
-          </div>
-          <div class="header-actions">
-            <a class="btn-pdf" href="catalogo/index.html">Ver páginas do catálogo</a>
-            <a class="btn-pdf btn-secondary" href="catalogo/catalogo-jujubilu-2026.pdf"
-              >Baixar PDF</a
-            >
-          </div>
-        </div>
+      <div class="container header-bar">
+        <a class="brand" href="#inicio">
+          <span class="logo-circle">JL</span>
+          <span class="brand-text">
+            <strong>Jujubilu</strong>
+            <small>Lembrancinhas</small>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Principal">
+          <a href="#historia">História</a>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <a
+          class="btn-whatsapp"
+          href="https://wa.me/5585987081055"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Pedir no WhatsApp</a
+        >
       </div>
     </header>
 
-    <main class="main">
-      <div class="container">
-        <section class="intro">
-          <h2>Lista completa de produtos</h2>
-          <p>
-            Informações e preços atualizados. As artes das fotos são exemplos de
-            personalização — o tema muda conforme o pedido.
-          </p>
-        </section>
+    <main>
+      <section id="inicio" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Linha Premium · Catálogo 2026</p>
+            <h1>Personalizadas com amor, criadas para encantar</h1>
+            <p class="lead">
+              17 anos transformando tema, nome e idade em lembrancinha pronta
+              para a festa. Você sonha, a gente realiza.
+            </p>
+            <div class="hero-actions">
+              <a class="btn-primary" href="#catalogo">Folhear o catálogo</a>
+              <a class="btn-ghost" href="#historia">Nossa história</a>
+            </div>
+            <ul class="hero-pills">
+              <li>17 anos no mercado</li>
+              <li>35 modelos</li>
+              <li>Arte no seu tema</li>
+            </ul>
+          </div>
+          <figure class="hero-photo">
+            <img
+              src="portfolio/capa-2026.jpg"
+              alt="Capa do catálogo 2026 da Jujubilu"
+            />
+          </figure>
+        </div>
+      </section>
 
-        <div id="products-grid" class="products-grid" aria-live="polite"></div>
-      </div>
+      <section id="historia" class="historia">
+        <div class="container historia-layout">
+          <div>
+            <p class="eyebrow">Quem somos</p>
+            <h2>Nossa história</h2>
+            <p class="lead">
+              Há 17 anos no mercado, com profissionalismo e confiança. Um
+              ateliê de lembrancinhas feito com criatividade e muito carinho.
+            </p>
+            <div class="story-pair">
+              <article class="story-card">
+                <h3>Quem somos</h3>
+                <p>
+                  Cada peça ganha o tema, o nome e o jeitinho da sua festa.
+                  Trabalhamos lado a lado com as mãezinhas para o momento
+                  ficar inesquecível.
+                </p>
+              </article>
+              <article class="story-card">
+                <h3>Nossa missão</h3>
+                <p>
+                  Encantar com qualidade, personalização exclusiva e
+                  atendimento acolhedor — do primeiro “oi” até a entrega.
+                </p>
+              </article>
+            </div>
+          </div>
+          <figure class="story-photo">
+            <img
+              src="portfolio/nossa-historia.jpg"
+              alt="Página institucional: história, missão e contato"
+            />
+          </figure>
+        </div>
+        <div class="container">
+          <ul class="values">
+            <li>
+              <span>🎀</span>
+              <strong>Qualidade</strong>
+              <small>Peças pensadas para encantar</small>
+            </li>
+            <li>
+              <span>✏️</span>
+              <strong>Personalização</strong>
+              <small>Arte exclusiva do seu jeito</small>
+            </li>
+            <li>
+              <span>🚚</span>
+              <strong>Entrega segura</strong>
+              <small>Cuidado do pedido à caixa</small>
+            </li>
+            <li>
+              <span>💗</span>
+              <strong>Acolhimento</strong>
+              <small>Atendimento próximo e humano</small>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="catalogo" class="catalogo">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Catálogo completo</p>
+            <h2>Páginas originais, sem recorte</h2>
+            <p>
+              As 6 páginas do catálogo 2026, inteiras. As artes são exemplos —
+              o tema muda no seu pedido.
+            </p>
+            <div class="catalog-links">
+              <a href="catalogo/catalogo-jujubilu-2026.pdf">Baixar PDF</a>
+              <a href="https://wa.me/5585987081055" target="_blank" rel="noopener noreferrer">Pedir orçamento</a>
+            </div>
+          </div>
+          <div id="catalog-pages" class="catalog-pages"></div>
+        </div>
+      </section>
+
+      <section id="contato" class="contato">
+        <div class="container contato-box">
+          <h2>Vamos criar a lembrancinha da sua festa?</h2>
+          <p>Manda o tema, a idade e a quantidade no WhatsApp.</p>
+          <a
+            class="btn-primary"
+            href="https://wa.me/5585987081055?text=Oi%20Jujubilu!%20Quero%20um%20or%C3%A7amento%20do%20cat%C3%A1logo%202026."
+            target="_blank"
+            rel="noopener noreferrer"
+            >(85) 98708-1055</a
+          >
+          <p class="social">
+            Instagram
+            <a
+              href="https://instagram.com/jujubilu_lembrancinhas"
+              target="_blank"
+              rel="noopener noreferrer"
+              >@jujubilu_lembrancinhas</a
+            >
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="container">
-        <div class="footer-content">
-          <h3>Entre em contato</h3>
-          <p>Transforme suas festas em momentos inesquecíveis</p>
-
-          <div class="contact-grid">
-            <div class="contact-item">
-              <div class="contact-icon">📞</div>
-              <h4>Telefone</h4>
-              <p>+55 85 8708-1055</p>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">📧</div>
-              <h4>E-mail</h4>
-              <p>lembrancinhasjulubilu@gmail.com</p>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">🌐</div>
-              <h4>Site</h4>
-              <p>www.jujubilulembrancinhas.com.br</p>
-            </div>
-          </div>
-
-          <div class="footer-bottom">
-            <p class="highlight">
-              Produtos personalizados para festas e eventos especiais
-            </p>
-            <p class="copyright">
-              © 2026 Jujubilu Lembrancinhas — Todos os direitos reservados
-            </p>
-          </div>
-        </div>
+        <p>© 2026 Jujubilu Lembrancinhas — personalizadas com amor</p>
       </div>
     </footer>
 
